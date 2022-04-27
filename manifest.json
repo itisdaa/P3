@@ -1,51 +1,51 @@
 {
-  "name": "app name",
+  "name": "P3 - Additive Manufacturing Network",
   "short_name": "P3",
   "theme_color": "#feda14",
   "background_color": "#feda14",
-  "display": "browser",
-  "orientation": "",
-  "scope": "/https://designalgorithmanalysis.com/P3",
-  "start_url": "/src/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "https://designalgorithmanalysis.com/P3",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
-      "sizes": "72x72",
+      "sizes": "72x71",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-96x96.png",
-      "sizes": "96x96",
+      "sizes": "96x91",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-128x128.png",
-      "sizes": "128x128",
+      "sizes": "128x121",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-144x144.png",
-      "sizes": "144x144",
+      "sizes": "144x141",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-152x152.png",
-      "sizes": "152x152",
+      "sizes": "152x151",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-192x192.png",
-      "sizes": "192x192",
+      "sizes": "192x191",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-384x384.png",
-      "sizes": "384x384",
+      "sizes": "384x381",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-512x512.png",
-      "sizes": "512x512",
+      "sizes": "512x511",
       "type": "image/png"
     }
   ]
