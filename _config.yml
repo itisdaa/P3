@@ -1,0 +1,10 @@
+theme: jekyll-theme-cayman
+title: P3
+
+defaults:
+  -
+    scope:
+      path: "/src/index.html"
+    values:
+      layout: "default"
+   
