@@ -15,17 +15,17 @@
     },
     {
       "src": "images/icons/icon-96x96.png",
-      "sizes": "96x91",
+      "sizes": "96x95",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-128x128.png",
-      "sizes": "128x121",
+      "sizes": "128x127",
       "type": "image/png"
     },
     {
       "src": "images/icons/icon-144x144.png",
-      "sizes": "144x141",
+      "sizes": "144x143",
       "type": "image/png"
     },
     {
@@ -40,7 +40,7 @@
     },
     {
       "src": "images/icons/icon-384x384.png",
-      "sizes": "384x381",
+      "sizes": "384x383",
       "type": "image/png"
     },
     {
