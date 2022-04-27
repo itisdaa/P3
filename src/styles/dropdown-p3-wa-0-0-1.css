@@ -1,0 +1,145 @@
+
+
+html body form fieldset#custom div.select[data-multiple] div.header {
+  display: none;
+}
+
+html body form fieldset#custom div.select div.header {
+  content: '▼';
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+html body form fieldset#custom div.select div.header::after {
+  content: '▼';
+  align-self: stretch;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: .5em;
+}
+
+html body form fieldset#custom div.select div.header:hover:after {
+  background-color: black;
+  color: #FEDA14;
+}
+
+.select .header select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border-width: 0;
+  width: 100%;
+  flex: 1;
+  display: none;
+}
+
+.select .header select optgroup {
+  display: none;
+}
+
+.select select div.option {
+  display: none;
+}
+
+html body form fieldset#custom div.select {
+  user-select: none;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 7px;
+  border: black solid 0px;
+  width: 100%;
+  display: inline-block;
+}
+/*
+html body form fieldset#custom div.select:focus {
+  border-color: #263571;
+}
+
+html body form fieldset#custom div.select:hover {
+  border-color: #263571;
+}*/
+
+html body form fieldset#custom div.select[data-open] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html body form fieldset#custom div.select[data-open] datalist {
+  display: initial;
+  background-color: #FEDA14F;
+}
+
+html body form fieldset#custom div.select datalist {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  border: black solid 4px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+html body form fieldset#custom div.select datalist div.option {
+  background-color: #FEDA14;
+  cursor: pointer;
+  padding: 0.5em;
+  border-width: 0px;
+}
+
+html body form fieldset#custom div.select datalist div.option:hover {
+  background-color: black;
+  color: #FEDA14;
+}
+
+html body form fieldset#custom div.select datalist div.option:focus {
+  background-color: black;
+  color: #FEDA14;
+}
+
+html body form fieldset#custom div.select datalist div.option:checked {
+  background-color: black;
+  color: #FEDA14;
+}
+
+
+html body form fieldset#custom div.select div.optgroup div.label {
+  font-weight: 400;
+}
+
+html body form fieldset#custom div.select div.optgroup div.option div.label {
+  font-weight: 400;
+  padding: .25em;
+}
+
+html body form fieldset#custom div.select div.header {
+  flex: 1;
+  display: flex;
+  width: auto;
+  box-sizing: border-box;
+  border-width: 4px;
+  border-style: inherit;
+  border-color: inherit;
+  border-radius: inherit;
+}
+
+html body form fieldset#custom div.select div.header span {
+  flex: 1;
+  padding: .5em;
+}
