@@ -1,36 +1,13 @@
-//AMS Databse
-let amsDB = [
-  {
-    name: 'ams1',
-    availableProcces: ['FDM'],
-    location: {
-      long: 33.680240,
-      lat: 73.110155
-    },
-    contact: 923106166593,
-    rate: 15
-  },
-  {
-    name: 'ams2',
-    availableProcces: ['SLA','FDM'],
-    location: {
-      long: 33.641148,
-      lat: 73.041471
-    },
-    contact: 923319579789,
-    rate: 20
-  },
-  {
-    name: 'ams3',
-    availableProcces: ['FDM'],
-    location: {
-      long: 33.656487,
-      lat: 72.961958
-    },
-    contact: 923110336007,
-    rate: 70
-  }
-];
+//reading the json database uploaded on github
+let amsDB = new Object();
+fetch("https://jarfa.000webhostapp.com/AMS-Database.json")
+.then((response) => {
+   return response.json();
+}).then((jsondata) => {
+   amsDB = jsondata;
+});
+
+var i,j,k,z;
 
 //creating an array of index from the AMS data
 var indexDB = [];
@@ -47,9 +24,10 @@ if (navigator.geolocation) {
     pos.lat = position.coords.longitude;
   });
 };
-document.querySelector('select').value = 'SLA'
+document.querySelector('select').value = 'SLA';
 
 form.oninput = () => {
+  z=0;
   makerInput = {
     process: document.querySelector('select').value,
     location:pos,
@@ -70,19 +48,52 @@ form.oninput = () => {
   suggestedIndexDB = relvantIndexDB.concat(irrelvantIndexDB);
 
   //suggest the AMS
-  document.getElementById('process').textContent=amsDB[suggestedIndexDB[0]].availableProcces[
-    amsDB[suggestedIndexDB[0]].availableProcces.indexOf(makerInput.process)
-  ];
-  document.querySelector('#rate span').innerText=amsDB[suggestedIndexDB[0]].rate;
-  document.querySelector('#distance span').innerText=Math.round(getDistance(
-        makerInput.location.lat,
-        makerInput.location.long,
-        amsDB[suggestedIndexDB[0]].location.lat,
-        amsDB[suggestedIndexDB[0]].location.long
-      ));
-document.querySelector('legend#rates-slider span').textContent='Rs '+makerInput.rate;
-  url = 'https://wa.me/'+amsDB[suggestedIndexDB[0]].contact+'/';
+  updateSuggestion()
 }
+
+function suggestionIndexDBCheck() {
+  if (amsDB[suggestedIndexDB[z]].availableProcces.indexOf(makerInput.process)== -1) {
+      return 0;} else {return amsDB[suggestedIndexDB[z]].availableProcces.indexOf(makerInput.process);}
+}
+
+document.querySelector('.next p').onclick = () => {
+    z++;
+    z=arrayIndexLoop(z, suggestedIndexDB);
+    updateSuggestion();
+}
+
+function arrayIndexLoop(n, array) {
+  if (n>(array.length-1)) {
+    return 0;
+  } else if (n<0) {
+    return array.length-1;
+  } else {
+    return z;
+  }
+}
+
+function updateSuggestion() {
+  if (-1 < z && z < suggestedIndexDB.length) {
+    document.getElementById('process').textContent=amsDB[suggestedIndexDB[z]].availableProcces[
+      suggestionIndexDBCheck()];
+    document.querySelector('#rate span').innerText=amsDB[suggestedIndexDB[z]].rate;
+    document.querySelector('#distance span').innerText=Math.round(getDistance(
+          makerInput.location.lat,
+          makerInput.location.long,
+          amsDB[suggestedIndexDB[z]].location.lat,
+          amsDB[suggestedIndexDB[z]].location.long
+        ));
+    document.querySelector('legend#rates-slider span').textContent='Rs '+makerInput.rate;
+    url = 'https://wa.me/'+amsDB[suggestedIndexDB[z]].contact+'/';
+  }
+}
+
+document.querySelector('.back p').onclick = () => {
+    z--;
+    z=arrayIndexLoop(z, suggestedIndexDB);
+    updateSuggestion();
+}
+
 //bubble sort for jsonDB for the location
 function bubbleSwap(arr) {
   for (i = 0; i < arr.length; i++) {
@@ -98,8 +109,7 @@ function bubbleSwap(arr) {
   }
 };
 
-function sortBy(b,k,arr,makerInput, amsDB)
-{
+function sortBy(b,k,arr,makerInput, amsDB) {
   if (b==0) {
     //console.log('Sorting by Cost')
     return sortByCostCondition(k,arr,makerInput,amsDB);
