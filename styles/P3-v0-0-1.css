@@ -157,7 +157,7 @@ a {
     text-align: center;
 }
 
-@media only screen and (max-height: 620px) {
+@media only screen and (max-height: 720px) {
   footer {
     display: none;
   }
