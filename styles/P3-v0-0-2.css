@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+  --colorP: white;
+  --colorS: black;
+  --colorT: whitesmoke;
+
+/*just in case somebody wants customization*/
+/*
+  --shadowcolor: var(--colorS);
+  --bordercolor: var(--colorS);
+  --backgroundcolorPrimary: var(--colorP);
+  --backgroundcolorSecondary: var(--colorT);
+  --backgroundcolorTeritory: var(--colorS);
+  --primaryColor: var(--colorS);
+  --secondaryColor: var(--colorT);
+*/
+}
+
+
+
+html {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin: 4.5vh auto;
+  font-family: 'VT323', monospace;
+  background-color: var(--colorP);
+  color: var(--primaryColor);
+  align-content: center;
+  flex-wrap: wrap;
+}
+.main-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+.home-daa a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.theme-change {
+  cursor: pointer;
+}
+
+.algo-output {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.suggestion-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
+  border: var(--colorS) solid 3px;
+  border-radius: 1.3em;
+  padding: 4% 5%;
+  box-shadow: 3px 3px 0px var(--colorS);
+  align-content: center;
+  cursor: pointer;
+}
+
+.suggestion-card:active {
+  box-shadow: none;
+}
+
+.suggestion-card>div {
+  padding: 0.8em;
+}
+
+.prefer-algo-output {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.prefer-algo-output div {
+  display: block;
+  font-size: 0.9em;
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+  margin-bottom: 27%;
+  min-width: 50px;
+  text-align: center;
+}
+
+.prefer-algo-output div:last-child {
+  margin-bottom: 0;
+  background: var(--colorS);
+  color: var(--colorT);
+}
+
+div.AMSP-process, div.AMSP-rate {
+  background: var(--colorT);
+  color: var(--colorS);
+}
+
+.AMSP-detail {
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: var(--colorS)
+}
+
+.AMSP-name {
+  font-size: 1.7em;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.available-colors-list {
+  margin-top: 1.5%;
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+}
+
+.available-colors-list div {
+  width: 14px;
+  aspect-ratio: 1/1;
+  float: left;
+  margin-right: 10%;
+  border-color: var(--colorS);
+}
+
+.available-colors-list div:last-child {
+  margin-right: 0;
+}
+
+.AMSP-detail > div {
+  position: relative;
+  margin-bottom: 7%;
+  text-align: left;
+}
+
+.AMSP-detail > div:last-child {
+  margin-bottom: 0;
+}
+
+.available-materials-list {
+  margin-top: 1.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.available-materials-list div {
+  border-radius: 5px;
+  float: left;
+  width: auto;
+  padding: 5px 10px;
+  margin-right: 0.5em;
+  background: var(--colorS);
+  color: var(--colorT);
+}
+.available-materials-list div:last-child {
+  margin-right: 0;
+}
+
+.suggestion-card-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1.0em;
+  align-content: center;
+  align-items: center;
+}
+
+.suggestion-card-nav-bar>div {
+  font-size: 1.7em;
+  padding: 0.3em 1em;
+  filter: drop-shadow(2px 2px 0 var(--colorS))
+}
+
+.suggestion-card-nav-bar>div:active {
+  filter: none;
+}
+
+.suggestion-card-nav-bar > div:hover {
+}
+
+.user-input {
+  width: 90%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  color: var(--colorS)
+}
+
+fieldset {border: none;}
+
+#prefered-rate-slider {
+  -webkit-appearance: none;
+  height: 20px;
+  background: none;
+  border: var(--colorS) solid 4px;
+  border-radius: 15px;
+  -webkit-transition: 0.2s;
+  width: 96%;
+}
+
+#prefered-rate-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: var(--colorS) solid 4px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#prefered-rate-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+  border: var(--colorS) solid 4px;
+  border-radius: 10px;
+}
+
+.prefered-process fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.toggle-prefered-process {
+  float: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.toggle-prefered-process input {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.toggle-prefered-process input:checked ~ .checkmark-prefered-process {
+  background: var(--colorS);
+  color: var(--colorT);
+}
+
+#prefered-process-legend {
+  margin-bottom: 10px;
+}
+
+.checkmark-prefered-process {
+  min-width: 10%;
+  text-align: right;
+  background: none;
+  border: var(--colorS) solid 4px;
+  border-radius: 0.4em;
+  padding: 0.3em 2.3em;
+  margin: 0;
+  color: var(--colorS)
+}
+
+.intro-p3 {
+    position: absolute;
+    display: block;
+    bottom: 0%;
+    margin-bottom: 2em;
+    text-align: center;
+    color: var(--colorS);
+}
+
+@media only screen and (max-width: 320px) {
+  .suggestion-card>div:last-child {
+    flex-wrap: nowrap;
+  }
+  .suggestion-card>div:first-child {
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: space-evenly;
+    padding: 1.3em;
+  }
+  .suggestion-card {
+    padding: 1em;
+    border: none;
+    box-shadow: none;
+    flex-direction:column;
+  }
+
+  .prefer-algo-output {
+    flex-direction: row;
+  }
+  .prefer-algo-output > div {
+    margin-bottom: 0;
+    margin-right: 0.4em;
+  }
+  .prefer-algo-output > div:last-child {
+    margin-right: 0;
+  }
+
+  .AMSP-detail {
+    padding: inherit;
+    border: var(--colorS) solid 3px;
+    border-radius: inherit;
+    box-shadow: 2px 3px 5px var(--colorS);
+  }
+}
+
+@media only screen and (max-width: 275px),(max-height: 700px) and (orientation: portrait) {
+  body:last-child::after {
+    content: '❌Resolution Not Supported❌';
+    text-align: center;
+    margin-top: 7%;
+  }
+  .intro-p3 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 270px) {
+  body {
+    display: none;
+  }
+  html {
+    background: url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1515433106i/24859156.png');
+    background-position: center;
+    background-size: cover;
+
+  }
+}
