@@ -4,92 +4,114 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>P3 - Additive Manufacturing Network</title>
-    <link rel="stylesheet" href="./styles/P3-v0-0-1.css"/>
+    <meta
+      name="description"
+      content="
+        P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
+        "
+    >
+    <link rel="stylesheet" href="./styles/P3-v0-0-2.css"/>
     <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
     <meta name="theme-color" content="#FEDA14">
     <link rel="apple-touch-icon" href="./images/icon/icon-512x512.png">
   </head>
   <body>
-    <div class="p3">
+    <div class="main-nav-bar">
+      <div class="home-daa">
+        <a href="https://designalgorithmanalysis.com">🏛️</a>
+      </div>
+      <div class="theme-change">
+        🎲
+      </div>
+    </div>
 
-      <div class="output">
-        <div class="suggestions">
-          <div class="ams1">
-            <div id="process">#</div>
-            <div class="info">
-              <div id="rate">
-                <span>0</span>
-                <sup>Rs/g</sup>
-              </div>
-              <div id="distance">
-                <span>0</span>
-                <sup>Km</sup>
-              </div>
+    <div class="algo-output">
+      <div class="suggestion-card">
+
+        <div class="AMSP-detail">
+          <div class="AMSP-name">
+            👻
+          </div>
+          <div class="AMSP-available-colors">
+            <div class="available-colors-text">
+              Available Colors
+            </div>
+            <div class="available-colors-list">
+              <div>👻</div>
+            </div>
+          </div>
+          <div class="AMSP-available-materials">
+            <div class="available-materials-text">
+              Available Materials
+            </div>
+            <div class="available-materials-list">
+              <div>👻</div>
             </div>
           </div>
         </div>
-        <div class="suggestion-nav">
-          <div class="next">
-            <p>
-              ▶
-            </p>
+
+        <div class="prefer-algo-output">
+            <div class="AMSP-process">
+              FDM
+            </div>
+            <div class="AMSP-rate">
+              <span>40+</span><sup>Rs/g</sup>
+            </div>
+            <div class="AMSP-distance">
+              <span>27</span><sup>Km</sup>
+            </div>
           </div>
-          <div class="back">
-            <p>
-              ◀
-            </p>
+
+      </div>
+
+      <div class="suggestion-card-nav-bar">
+        <div class="back">
+          👈
+        </div>
+        <div class="next">
+          👉
+        </div>
+
+      </div>
+    </div>
+
+    <div class="user-input">
+      <form class="basic-input" method="post" enctype="multipart/form-data" name="basic-formdata">
+        <div class="basic-form">
+          <div class="prefered-rate-input">
+            <fieldset>
+              <legend id="prefered-rate-legend">Prefered Rate: <span>👻</span></legend>
+              <label for="prefered-rate-slider">
+                <input
+                  type="range"
+                  name="prefered-rate-slider"
+                  id="prefered-rate-slider"
+                  value="40"
+                  min="12"
+                  max="60">
+              </label>
+            </fieldset>
+          </div>
+          <div class="prefered-process">
+            <fieldset>
+              <legend id="prefered-process-legend" for="toggle-prefered-process">Prefered Process</legend>
+              <label class="toggle-prefered-process">
+                <input type="radio" name="process" value="FDM" checked>
+                <span class="checkmark-prefered-process">FDM</span>
+              </label>
+              <label class="toggle-prefered-process">
+                <input type="radio" name="process" value="SLA">
+                <span class="checkmark-prefered-process">SLA</span>
+              </label>
+            </fieldset>
           </div>
         </div>
-      </div>
+      </form>
+    </div>
 
-      <div class="userInput">
-        <form class="input" enctype="multipart/form-data" method="post" name="formdata">
-          <div class="form" name="formData">
-
-            <div class="resolution">
-              <fieldset>
-                <legend id="rates-slider">Prefered Rate: <span></span></legend>
-                <label for="resolution">
-                  <input
-                    type="range"
-                    min="12"
-                    max="100"
-                    value="15"
-                    name="resolution"
-                    id="resolution"
-                  />
-                </label>
-              </fieldset>
-            </div>
-
-            <div class="process">
-              <fieldset id=custom>
-                 <legend>Prefered Process</legend>
-                 <select
-                    name="process"
-                    id="process"
-                    autocomplete="off"
-                    >
-                 </select>
-               </fieldset>
-            </div>
-
-            <input type="submit" value="submit" hidden/>
-
-          </div>
-        </form>
-      </div>
-
+    <div class="intro-p3">
+      P3, a Network of Additive Manufacturing Services powered by Daa
     </div>
   </body>
-  <script src="./scripts/P3-v-0-0-1.js"></script>
-  <br><br>
-  <footer>
-    <p>P3 is network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.</p>
-    <p>For Feedback or Querry email us at <br>
-      <a href="mailto:hello@designalgorithmanalysis.com" id="mail">
-        hello@designalgorithmanalysis.com
-      </a>
-    </p>
-  </footer>
+  <script src="./scripts/P3-v-0-0-2.js"></script>
 </html>
