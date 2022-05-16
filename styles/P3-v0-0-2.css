@@ -341,7 +341,7 @@ fieldset {border: none;}
 
 @media only screen and (max-width: 275px),(max-height: 700px) and (orientation: portrait) {
   body:last-child::after {
-    content: '❌Resolution Not Supported❌';
+    content: 'Try P3 on Desktop 🖥️';
     text-align: center;
     margin-top: 7%;
   }
