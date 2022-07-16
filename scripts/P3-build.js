@@ -1,28 +1,10 @@
 //Database to read from
-let ammDB = [
-  {
-    model: "Play",
-    maker: "OBJEXYZ",
-    price: 90,
-    config: ["cartesian"],
-    tagKeys: [
-      ["Extruder Temperature", "250°C"],
-      ["Communication Interface","USB"],
-      ["Print Resolution", "75μm"],
-      ["Configuration","Cartesian"],
-      ["Structure Material","Steel"],
-      ["Power","150W"],
-      ["Filament Diameter", "1.75mm"],
-      ["Size","Standard"]
-    ],
-    location: {
-      long: 24.829434,
-      lat: 67.099230
-    },
-    image: "https://objexyz.com/wp-content/uploads/2022/04/OBJEXYZ-PLAY-COMPLETE-e1650450049455.png",
-    url: "https://objexyz.com/product/objexyz-play-3d-printer/"
-  }
-];
+fetch("https://jarfa.000webhostapp.com/AMS-Database.json")
+.then((response) => {
+   return response.json();
+}).then((jsondata) => {
+   ammDB = jsondata;
+});
 
 //finding process and rates available in the ammDB to add only those options that available
 //config is use less as we're only dealing with FDM and SLA
