@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+  --colorP: white;
+  --colorS: black;
+  --colorT: whitesmoke;
+
+/*just in case somebody wants customization*/
+/*
+  --shadowcolor: var(--colorS);
+  --bordercolor: var(--colorS);
+  --backgroundcolorPrimary: var(--colorP);
+  --backgroundcolorSecondary: var(--colorT);
+  --backgroundcolorTeritory: var(--colorS);
+  --primaryColor: var(--colorS);
+  --secondaryColor: var(--colorT);
+*/
+}
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+/* adjust typography defaults */
+/* color, background to be adjusted when changing theme*/
+body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin: 4.5vh auto;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--colorP);
+  color: var(--colorS);
+  align-content: center;
+  flex-wrap: wrap;
+}
+.main-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin: 1em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.algo-output {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+/*border and shadow to be adjusted when changing theme*/
+/*in dark shade of background*/
+.suggestion-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: var(--colorS) solid 3px;
+  border-radius: 1.3em;
+  padding: 4% 4%;
+  box-shadow: 3px 3px 0px var(--colorS);
+  align-content: center;
+  cursor: pointer;
+  align-items: stretch;
+}
+
+.suggestion-card:hover {
+  box-shadow: 3px 3px 0px var(--colorS);
+}
+
+.suggestion-card:active {
+  box-shadow: none;
+}
+
+.suggestion-card>div {
+  padding: 0.8em;
+}
+
+.suggestion-card-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1.0em;
+  align-content: center;
+  align-items: center;
+}
+
+/*shadow to be adjusted when changing theme*/
+.suggestion-card-nav-bar>div {
+  font-size: 1.7em;
+  padding: 0.3em 1em;
+  filter: drop-shadow(2px 2px 0 var(--colorS))
+}
+
+.suggestion-card-nav-bar>div:active {
+  filter: none;
+}
+
+.suggestion-card-nav-bar > div:hover {
+}
+
+
+.user-input {
+  width: 90%;
+  /* max-width: 320px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: var(--colorS);
+  align-content: center;
+}
+
+fieldset {border: none;}
+
+/*border to be adjusted when changing theme*/
+#prefered-conVar-slider {
+  -webkit-appearance: none;
+  height: 20px;
+  background: none;
+  border: var(--colorS) solid 3px;
+  border-radius: 15px;
+  -webkit-transition: 0.2s;
+  width: 96%;
+}
+
+/*border to be adjusted when changing theme*/
+#prefered-conVar-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: var(--colorS) solid 3px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/*border to be adjusted when changing theme*/
+#prefered-conVar-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+  border: var(--colorS) solid 3px;
+  border-radius: 10px;
+}
+
+.prefered-discVar fieldset {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.toggle-prefered-discVar {
+  float: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 3px;
+}
+
+.toggle-prefered-discVar input {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/*background and color to be adjusted when changing theme*/
+.toggle-prefered-discVar input:checked ~ .checkmark-prefered-discVar {
+  background: var(--colorS);
+  color: var(--colorP);
+}
+
+#prefered-discVar-legend {
+  margin-bottom: 10px;
+}
+
+/*border to be adjusted when changing theme*/
+.checkmark-prefered-discVar {
+  /* min-width: 10%; */
+  /* text-align: right; */
+  background: none;
+  border: var(--colorS) solid 2px;
+  border-radius: 0.5em;
+  padding: 0.3em 1.4em;
+  color: var(--colorS);
+}
+
+.intro-p3 {
+    position: absolute;
+    display: block;
+    bottom: 0%;
+    margin-bottom: 2em;
+    text-align: center;
+    color: var(--colorS);
+}
+
+@media only screen and (max-width: 320px) {
+  .suggestion-card>div:last-child {
+    flex-wrap: nowrap;
+  }
+  .suggestion-card>div:first-child {
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: space-evenly;
+    padding: 1.3em;
+  }
+  .suggestion-card {
+    padding: 1em;
+    border: none;
+    box-shadow: none;
+    flex-direction:column;
+  }
+
+  .prefer-algo-output {
+    flex-direction: row;
+  }
+  .prefer-algo-output > div {
+    margin-bottom: 0;
+    margin-right: 0.4em;
+  }
+  .prefer-algo-output > div:last-child {
+    margin-right: 0;
+  }
+
+  .AMSP-detail {
+    padding: inherit;
+    border: var(--colorS) solid 3px;
+    border-radius: inherit;
+    box-shadow: 2px 3px 5px var(--colorS);
+  }
+}
+
+@media only screen and (max-width: 270px) {
+  body {
+    display: none;
+  }
+  html {
+    background: url('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1515433106i/24859156.png');
+    background-position: center;
+    background-size: cover;
+
+  }
+}
