@@ -5,7 +5,7 @@
   "background_color": "#feda14",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/",
+  "scope": "/build.html",
   "start_url": "/index.html",
   "icons": [
     {
