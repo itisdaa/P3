@@ -1,4 +1,5 @@
 //Database to read from
+let ammDB = new Object();
 fetch("https://raw.githubusercontent.com/DesignAlgorithmAnalysis/P3/main/src/data/AMM-Database.json")
 .then((response) => {
    return response.json();
