@@ -40,11 +40,12 @@ for (let a = 0; a < ammDB.length; a++) {
 }
 
 //setting min and max values from the slider
-document.querySelector('.prefered-conVar-input input').min=Math.min(...availablePrices);
-document.querySelector('.prefered-conVar-input input').max=Math.max(...availablePrices);
+//document.querySelector('.prefered-conVar-input input').min=Math.min(...availablePrices);
+//document.querySelector('.prefered-conVar-input input').max=Math.max(...availablePrices);
 
 //Take Inputs from Users
 var form = document.forms.namedItem("basic-formdata");
+var z;
 form.oninput = () => {
   z=0; //varriable for navigating between suggestions
 
