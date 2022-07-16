@@ -1,0 +1,69 @@
+.s-AMM-preview {
+  background: url("https://www.iconpacks.net/icons/2/free-halloween-icon-2281-thumb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 180px;
+}
+
+.s-AMM-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.s-AMM-model {
+  font-weight: 600;
+  font-size: 2.6em;
+}
+
+.s-AMM-maker{
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.s-AMM-tags {
+  margin-top: 1.5%;
+  display: flex;
+  /* display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1em;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 6em 6em 6em 6em;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 3px;
+  grid-column-gap: 3px; */
+  justify-items: center;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.s-AMM-tags div {
+  border-radius: 5px;
+  padding: 0.3em 0.6em;
+  margin: 1%;
+  background: var(--colorT);
+  color: var(--colorS);
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.s-AMM-price {
+  border: 2px solid var(--colorS);
+  color: var(--colorS);
+  border-radius: 0.5em;
+  padding: 0.3em 1.4em;
+  text-align: center;
+}
+.s-AMM-price:hover {
+  color: var(--colorP);
+  background-color: var(--colorS);
+}
