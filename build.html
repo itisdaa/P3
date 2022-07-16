@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>P3 - Additive Manufacturing Network</title>
+    <meta
+      name="description"
+      content="
+        P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
+        "
+    >
+    <meta 
+          name="keywords" 
+          content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory"
+    >
+    <link rel="stylesheet" href="./styles/P3-main.css"/>
+    <link rel="stylesheet" href="./styles/P3-build.css"/>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
+    <meta name="theme-color" content="#FEDA14">
+    <link rel="apple-touch-icon" href="./images/icon/icon-512x512.png">
+  </head>
+  <body>
+    <div class="main-nav-bar">
+      <div id="home-p3">
+        <a href="./p3wa.html">🏛️</a>
+      </div>
+      <div id="theme-change">
+        🎨
+      </div>
+      <div id="build">
+        <a href="./build.html">🖨️</a>
+      </div>
+    </div>
+    <script src="./scripts/changingthemes.js"></script>
+
+    <div class="algo-output">
+      <div class="suggestion-card">
+
+        <div class="s-AMM-preview">
+        </div>
+
+        <div class="s-AMM-info">
+          <div class="s-AMM-model">
+            👻
+          </div>
+          <div class="s-AMM-maker">
+            👻
+          </div>
+          <div class="s-AMM-tags"></div>
+          <div class="s-AMM-price">
+            <span id="price">👻</span>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="suggestion-card-nav-bar">
+        <div class="back">
+          👈
+        </div>
+        <div class="next">
+          👉
+        </div>
+
+      </div>
+    </div>
+
+    <div class="user-input">
+      <form class="basic-input" method="post" enctype="multipart/form-data" name="basic-formdata">
+        <div class="basic-form">
+          <div class="prefered-conVar-input">
+            <fieldset>
+              <legend id="prefered-conVar-legend">Prefered Price: <span>👻</span></legend>
+              <label for="prefered-conVar-slider">
+                <input
+                  type="range"
+                  name="prefered-conVar-slider"
+                  id="prefered-conVar-slider"
+                  value="40"
+                  min="30"
+                  max="120">
+              </label>
+              <script type="text/javascript">
+                document.querySelector('#prefered-conVar-slider').oninput = () => {
+                  document.querySelector('legend#prefered-conVar-legend span').textContent=`Rs ${document.querySelector('.prefered-conVar-input input').value}k`
+                };
+              </script>
+            </fieldset>
+          </div>
+          <div class="prefered-discVar">
+            <fieldset>
+              <legend id="prefered-discVar-legend" for="toggle-prefered-discVar">Prefered Configuration</legend>
+              <label class="toggle-prefered-discVar">
+                <input type="radio" name="config" value="cartesian" checked>
+                <span class="checkmark-prefered-discVar">Cartesian</span>
+              </label>
+              <label class="toggle-prefered-discVar">
+                <input type="radio" name="config" value="corexy">
+                <span class="checkmark-prefered-discVar">Core XY</span>
+              </label>
+              <label class="toggle-prefered-discVar">
+                <input type="radio" name="config" value="delta">
+                <span class="checkmark-prefered-discVar">Delta</span>
+              </label>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="intro-p3">
+      P3, a Network of Additive Manufacturing Services powered by Daa
+    </div>
+  </body>
+  <script src="./scripts/P3-build.js"></script>
+</html>
