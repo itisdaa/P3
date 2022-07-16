@@ -208,9 +208,7 @@ fieldset {border: none;}
 }
 
 .intro-p3 {
-    position: absolute;
-    display: block;
-    bottom: 0%;
+    margin-top: 2em;
     margin-bottom: 2em;
     text-align: center;
     color: var(--colorS);
