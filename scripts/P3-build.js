@@ -1,5 +1,5 @@
 //Database to read from
-fetch("https://jarfa.000webhostapp.com/AMS-Database.json")
+fetch("https://raw.githubusercontent.com/DesignAlgorithmAnalysis/P3/main/src/data/AMM-Database.json")
 .then((response) => {
    return response.json();
 }).then((jsondata) => {
