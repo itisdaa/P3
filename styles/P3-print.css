@@ -1,0 +1,105 @@
+.prefer-algo-output {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.prefer-algo-output div {
+  display: block;
+  font-size: 0.9em;
+  padding: 0.5em 0.7em;
+  border-radius: 5px;
+  margin-bottom: 27%;
+  min-width: 50px;
+  text-align: center;
+}
+
+/*background and color to be adjusted when changing theme*/
+.prefer-algo-output div:last-child {
+  margin-bottom: 0;
+  background: var(--colorS);
+  color: var(--colorT);
+}
+
+/*background and color to be adjusted when changing theme*/
+div.AMSP-process, div.AMSP-rate {
+  background: var(--colorT);
+  color: var(--colorS);
+}
+
+.AMSP-detail {
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: var(--colorS)
+}
+
+.AMSP-name {
+  font-size: 1.7em;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.available-colors-list {
+  margin-top: 1.5%;
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+}
+
+/*border to be adjusted when changing theme*/
+.available-colors-list div {
+  width: 14px;
+  aspect-ratio: 1/1;
+  float: left;
+  margin-right: 10%;
+  border-color: var(--colorS);
+}
+
+.available-colors-list div:last-child {
+  margin-right: 0;
+}
+
+.AMSP-detail > div {
+  position: relative;
+  margin-bottom: 7%;
+  text-align: left;
+}
+
+.AMSP-detail > div:last-child {
+  margin-bottom: 0;
+}
+
+.available-materials-list {
+  margin-top: 1.5%;
+  display: flex;
+  flex-direction: row;
+}
+
+/*background and color to be adjusted when changing theme*/
+/*background shall be darker  from root color, color would be darker than root background*/
+.available-materials-list div {
+  border-radius: 5px;
+  float: left;
+  width: auto;
+  padding: 5px 10px;
+  margin-right: 0.5em;
+  background: var(--colorS);
+  color: var(--colorT);
+}
+.available-materials-list div:last-child {
+  margin-right: 0;
+}
+
+.user-input {
+  max-width: 320px;
+  align-items: stretch;
+}
