@@ -10,21 +10,31 @@
         P3 is a Network of Additive Manufacturing Services, allowing makers to build stuff wherever, whenever.
         "
     >
-    <link rel="stylesheet" href="./styles/P3-v0-0-2.css"/>
+    <meta        
+      name="keywords" 
+      content="P3, 3D, printing, AM, additive manufacturing, network, service provider, buy, printer, printers, Pakistan, 3D Printers in Pakistan, minifactory"
+    >
+    <link rel="stylesheet" href="./styles/P3-main.css"/>
+    <link rel="stylesheet" href="./styles/P3-print.css"/>
     <link rel="manifest" href="./manifest.json">
     <link rel="icon" type="image/x-icon" href="./imgs/faviconP3.ico">
     <meta name="theme-color" content="#FEDA14">
     <link rel="apple-touch-icon" href="./images/icon/icon-512x512.png">
   </head>
   <body>
+    
     <div class="main-nav-bar">
-      <div class="home-daa">
-        <a href="https://designalgorithmanalysis.com">🏛️</a>
+      <div class="home-p3">
+        <a href="./index.html">🏛️</a>
       </div>
       <div class="theme-change">
-        🎲
+        🎨
+      </div>
+      <div class="build">
+        <a href="./build.html">🖨️</a>
       </div>
     </div>
+    <script src="./scripts/changingthemes.js"></script>
 
     <div class="algo-output">
       <div class="suggestion-card">
@@ -53,13 +63,13 @@
 
         <div class="prefer-algo-output">
             <div class="AMSP-process">
-              FDM
+              👻
             </div>
             <div class="AMSP-rate">
-              <span>40+</span><sup>Rs/g</sup>
+              <span>👻</span><sup>Rs/g</sup>
             </div>
             <div class="AMSP-distance">
-              <span>27</span><sup>Km</sup>
+              <span>👻</span><sup>Km</sup>
             </div>
           </div>
 
@@ -79,30 +89,35 @@
     <div class="user-input">
       <form class="basic-input" method="post" enctype="multipart/form-data" name="basic-formdata">
         <div class="basic-form">
-          <div class="prefered-rate-input">
+          <div class="prefered-conVar-input">
             <fieldset>
-              <legend id="prefered-rate-legend">Prefered Rate: <span>👻</span></legend>
-              <label for="prefered-rate-slider">
+              <legend id="prefered-conVar-legend">Prefered Rate: <span>👻</span></legend>
+              <label for="prefered-conVar-slider">
                 <input
                   type="range"
-                  name="prefered-rate-slider"
-                  id="prefered-rate-slider"
+                  name="prefered-conVar-slider"
+                  id="prefered-conVar-slider"
                   value="40"
                   min="12"
                   max="60">
               </label>
+              <script type="text/javascript">
+                document.querySelector('#prefered-conVar-slider').oninput = () => {
+                  document.querySelector('legend#prefered-conVar-legend span').textContent=`Rs ${document.querySelector('.prefered-conVar-input input').value}/g`
+                };
+              </script>
             </fieldset>
           </div>
-          <div class="prefered-process">
+          <div class="prefered-discVar">
             <fieldset>
-              <legend id="prefered-process-legend" for="toggle-prefered-process">Prefered Process</legend>
-              <label class="toggle-prefered-process">
+              <legend id="prefered-discVar-legend" for="toggle-prefered-discVar">Prefered Process</legend>
+              <label class="toggle-prefered-discVar">
                 <input type="radio" name="process" value="FDM" checked>
-                <span class="checkmark-prefered-process">FDM</span>
+                <span class="checkmark-prefered-discVar">FDM</span>
               </label>
-              <label class="toggle-prefered-process">
+              <label class="toggle-prefered-discVar">
                 <input type="radio" name="process" value="SLA">
-                <span class="checkmark-prefered-process">SLA</span>
+                <span class="checkmark-prefered-discVar">SLA</span>
               </label>
             </fieldset>
           </div>
@@ -114,5 +129,5 @@
       P3, a Network of Additive Manufacturing Services powered by Daa
     </div>
   </body>
-  <script src="./scripts/P3-v-0-0-2.js"></script>
+  <script src="./scripts/P3-print.js"></script>
 </html>
