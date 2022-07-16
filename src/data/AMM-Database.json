@@ -1,0 +1,102 @@
+[
+  {
+    "model": "Play",
+    "maker": "OBJEXYZ",
+    "price": 90,
+    "config": [
+      "cartesian"
+    ],
+    "tagKeys": [
+      [
+        "Extruder Temperature",
+        "250°C"
+      ],
+      [
+        "Communication Interface",
+        "USB"
+      ],
+      [
+        "Print Resolution",
+        "75μm"
+      ],
+      [
+        "Configuration",
+        "Cartesian"
+      ],
+      [
+        "Structure Material",
+        "Steel"
+      ],
+      [
+        "Power",
+        "150W"
+      ],
+      [
+        "Filament Diameter",
+        "1.75mm"
+      ],
+      [
+        "Size",
+        "Standard"
+      ]
+    ],
+    "location": {
+      "long": 24.829434,
+      "lat": 67.09923
+    },
+    "image": "./src/data/pro-objexyz.png",
+    "url": "https://objexyz.com/product/objexyz-play-3d-printer/"
+  },
+  {
+    "model": "Pro",
+    "maker": "OBJEXYZ",
+    "price": 260,
+    "config": [
+      "cartesian"
+    ],
+    "tagKeys": [
+      [
+      "Configuration",
+      "Cartesian"
+      ],
+      [
+      "Extruder Temperature",
+      "250°C"
+      ],
+      [
+      "Bed Temperature",
+      "100°C"
+      ],
+      [
+        "Communication Interface",
+        "USB"
+      ],
+      [
+        "Print Resolution",
+        "75μm"
+      ],
+      [
+      "Size",
+      "Large"
+      ],
+      [
+        "Structure Material",
+        "Steel"
+      ],
+      [
+        "Extrusion",
+        "Dual"
+      ],
+      [
+        "Filament Diameter",
+        "1.75mm"
+      ],
+    ],
+    "location": {
+      "long": 24.829434,
+      "lat": 67.09923
+    },
+    "image": "https://objexyz.com/wp-content/uploads/2022/04/OBJEXYZ-PLAY-COMPLETE-e1650450049455.png",
+    "url": "https://objexyz.com/product/objexyz-pro/"
+  }
+]
