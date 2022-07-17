@@ -44,7 +44,7 @@
       "long": 24.829434,
       "lat": 67.09923
     },
-    "image": "./src/data/pro-objexyz.png",
+    "image": "https://objexyz.com/wp-content/uploads/2022/04/OBJEXYZ-PLAY-COMPLETE-e1650450049455.png",
     "url": "https://objexyz.com/product/objexyz-play-3d-printer/"
   },
   {
@@ -96,7 +96,7 @@
       "long": 24.829434,
       "lat": 67.09923
     },
-    "image": "https://objexyz.com/wp-content/uploads/2022/04/OBJEXYZ-PLAY-COMPLETE-e1650450049455.png",
+    "image": "./src/data/pro-objexyz.png",
     "url": "https://objexyz.com/product/objexyz-pro/"
   }
 ]
