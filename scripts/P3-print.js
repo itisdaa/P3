@@ -4,7 +4,7 @@ var done = false;
 let amsDB = new Object();
 let availableProcceses = [];
 let availableRates = [];
-fetch("https://jarfa.000webhostapp.com/AMS-Database.json")
+fetch("https://raw.githubusercontent.com/itisdaa/P3/main/src/data/AMM-Database.json")
 .then((response) => {
    return response.json();
 }).then((jsondata) => {
